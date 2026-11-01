@@ -1,0 +1,15 @@
+[Unit]
+Description=Spotify Soloist headless player
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=%h/.config/soloist/soloist.env
+ExecStart="%h/.local/bin/soloist" --device-name "Cano Terminal" --api-key ${SOLOIST_API_KEY} --ws 127.0.0.1:0 --cache-size 512
+Restart=on-failure
+RestartSec=5
+UMask=0077
+
+[Install]
+WantedBy=default.target

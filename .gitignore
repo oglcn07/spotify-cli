@@ -1,0 +1,42 @@
+# Local environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Credentials and local account state
+.token-cache*
+.cache*
+.spotify-client-id
+.env
+.env.*
+!.env.example
+soloist.env
+*token*.json
+*credentials*.json
+*session*.json
+
+# Historical snapshots
+spotify.py.bak*
+spotify.py.before_*
+*.bak
+*.swp
+*~
+
+# Downloaded player binaries and archives (not redistributed)
+soloist
+soloist.exe
+soloist*.tar.gz
+soloist*.zip
+
+# Local tooling
+.agents/
+.codex/
+.aws/
+.DS_Store
